@@ -2,9 +2,9 @@ import React from "react";
 
 export default function UsersTable({ users, search }) {
     return (
-        <table className="w-full border-b border-green-200 overflow-y-scroll">
-            <thead>
-                <tr className="text-sm font-medium text-gray-700 border-b border-gray-200">
+        <table className="w-full border-b border-green-200 ">
+            <thead className="bg-slate-800 text-center rounded-t-lg">
+                <tr className="text-base font-medium text-gray-200 border-b border-gray-200">
                     <th className="pl-10">NAME</th>
                     <th className="py-4 px-4 text-center">ADDRESS</th>
                     <th className="py-4 px-4 text-center">COMPANY</th>
@@ -12,7 +12,7 @@ export default function UsersTable({ users, search }) {
                     <th className="py-4 px-4 text-center">WEBSTE</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="overflow-auto md:overflow-scroll">
                 {users
                     ?.filter((user) => {
                         if (search) return user.name.toLowerCase().includes(search) || user.username.toLowerCase().includes(search) || user.email.toLowerCase().includes(search);

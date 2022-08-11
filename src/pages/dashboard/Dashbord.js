@@ -3,13 +3,13 @@ import axios from "axios";
 
 import UsersTable from "../../components/UsersTable";
 
-const Dashbord = ({ setShow }) => {
+const Dashbord = () => {
     const [users, setUsers] = useState([]);
     const [search, setSearch] = useState("");
 
     useEffect(() => {
         axios
-            .get("https://my-json-server.typicode.com/glendmaatita/userjsondemo/db")
+            .get("/userjsondemo/db")
             .then(({ data }) => {
                 setUsers(data.data);
             })
@@ -19,11 +19,14 @@ const Dashbord = ({ setShow }) => {
     }, [search]);
 
     return (
-        <div className="App w-full min-h-screen font-sans text-gray-900 bg-gray-50 flex bg-blue-100">
+        <div className="App w-full min-h-screen font-sans text-gray-900 flex">
             <main className="flex-1 pb-7">
                 <div className="flex items-center justify-between py-6 px-10">
                     <div>
-                        <h1 className="text-2xl font-semibold leading-relaxed text-gray-800">CMS-Users</h1>
+                        <div className="flex ">
+                            <img src="./landX.png" className="w-10 h-auto" />
+                            <h1 className="text-2xl font-semibold leading-relaxed text-gray-800">CMS-Users</h1>
+                        </div>
                         <p className="text-sm font-medium text-gray-500">Let's grow to your business! Secure Your Future Starting Today</p>
                     </div>
                     <div>
