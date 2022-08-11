@@ -1,0 +1,8 @@
+.landing {
+    background-image: url("https://buat.web.id/wp-content/uploads/2020/08/bubble-animated-background.svg");
+    /* background-image: url("https://download.freesvg.se/wp-content/uploads/2020/11/velocity.jpg"); */
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
