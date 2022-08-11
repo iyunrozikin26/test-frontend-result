@@ -7,6 +7,10 @@ const Dashbord = () => {
     const [users, setUsers] = useState([]);
     const [search, setSearch] = useState("");
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+    };
+
     useEffect(() => {
         axios
             .get("/userjsondemo/db")
@@ -30,7 +34,7 @@ const Dashbord = () => {
                         <p className="text-sm font-medium text-gray-500">Let's grow to your business! Secure Your Future Starting Today</p>
                     </div>
                     <div>
-                        <form className="flex items-center">
+                        <form className="flex items-center" onSubmit={handleSearch}>
                             <label htmlFor="simple-search" className="sr-only">
                                 Search
                             </label>
